@@ -5,6 +5,8 @@ public class PotatoVariety {
     private double averageMass;
     private String texture;
 
+    private static boolean edible = true;
+
     public PotatoVariety(String name, double averageMass, String texture){
         this.name = name;
         this.averageMass = averageMass;
@@ -24,16 +26,19 @@ public class PotatoVariety {
         str.append(this.getAverageMass());
         str.append("\n Texture: ");
         str.append(this.getTexture());
+        str.append("\n Edible: ");
+        str.append(this.getEdible());
         return str.toString();
     }
 
     public String getName(){
         return this.name;
     }
-    public double getAverageMass(){
-        return this.averageMass;
+    public double getAverageMass(){ return this.averageMass;
     }
     public String getTexture(){
         return this.texture;
     }
+
+    public boolean getEdible() { return edible; }
 }
