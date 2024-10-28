@@ -10,11 +10,27 @@ public class PotatoVariety {
         this.averageMass = averageMass;
         this.texture = texture;
     }
+    public PotatoVariety(String name){
+        this(name, 0, null);
+    }
+
+    @Override
+    public String toString() {
+        // return super.toString();
+        StringBuilder str = new StringBuilder();
+        str.append("Name: ");
+        str.append(this.getName());
+        str.append("\n Average Mass: ");
+        str.append(this.getAverageMass());
+        str.append("\n Texture: ");
+        str.append(this.getTexture());
+        return str.toString();
+    }
 
     public String getName(){
         return this.name;
     }
-    public double averageMass(){
+    public double getAverageMass(){
         return this.averageMass;
     }
     public String getTexture(){
